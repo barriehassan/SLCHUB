@@ -32,12 +32,13 @@ class CustomUser(AbstractUser):
     email = models.EmailField(unique=True)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
-    profile_picture = models.ImageField(upload_to="profiles/", blank=True, null=True)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     is_approved = models.BooleanField(default=False)
     date_joined = models.DateTimeField(default=timezone.now)
-    passport_number = models.CharField(max_length=50, blank=True)
+    passport_number = models.CharField(max_length=10, blank=True, null=True)
+    ID_Picture = models.ImageField(upload_to="profiles/", blank=True, null=True,
+                                   help_text='Upload your ID picture, e.g National ID, Driver License etc')
 
     groups = models.ManyToManyField(
         Group,
@@ -54,7 +55,7 @@ class CustomUser(AbstractUser):
         verbose_name='user permissions',
     )
 
-    REQUIRED_FIELDS = ['first_name', 'last_name', 'user_type']
+    REQUIRED_FIELDS = ['first_name', 'last_name', 'user_type', 'ID_Picture']
     USERNAME_FIELD = 'email'
 
     objects = CustomUserManager()
@@ -65,11 +66,10 @@ class CustomUser(AbstractUser):
 
 class BaseProfile(models.Model):
     user = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
+    profile_picture = models.ImageField(upload_to="profiles/", blank=True, null=True)
     phone = models.CharField(max_length=15, blank=True, null=True)
     address = models.TextField(blank=True, null=True)
     DOB = models.DateField(blank=True, null=True)
-    media = models.URLField(blank=True, null=True)
-    bio = models.TextField(blank=True, null=True)
 
     class Meta:
         abstract = True
@@ -77,6 +77,8 @@ class BaseProfile(models.Model):
 class CreatorProfile(BaseProfile):
     media = models.URLField(blank=True, null=True)
     bio = models.TextField(blank=True, null=True)
+    website = models.URLField(blank=True, null=True)
+    category = models.CharField(max_length=255, blank=True, null=True, help_text='The category of contents you create')
     pass
 
     def __str__(self):

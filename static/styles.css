@@ -1,0 +1,131 @@
+:where([class^="ri-"])::before {
+  content: "\f3c2";
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f9fafb;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+.hero-section {
+  background-image: url("https://readdy.ai/api/search-image?query=professional%20digital%20content%20creators%20working%20on%20laptops%20and%20cameras%20in%20a%20modern%20office%20space%20with%20natural%20light%2C%20clean%20minimalist%20design%2C%20soft%20blue%20accents%2C%20showing%20diverse%20people%20collaborating%20on%20content%20creation%2C%20blogging%2C%20and%20digital%20media%20production%20in%20Sierra%20Leone&width=1920&height=800&seq=hero1&orientation=landscape");
+  background-size: cover;
+  background-position: center;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.custom-checkbox {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  user-select: none;
+}
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border: 2px solid #d1d5db;
+  border-radius: 4px;
+}
+.custom-checkbox:hover input ~ .checkmark {
+  border-color: #2563eb;
+}
+.custom-checkbox input:checked ~ .checkmark {
+  background-color: #2563eb;
+  border-color: #2563eb;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.custom-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+.custom-checkbox .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.custom-switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+.custom-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e5e7eb;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background-color: #2563eb;
+}
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+.file-upload-container {
+  border: 2px dashed #d1d5db;
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.file-upload-container:hover {
+  border-color: #2563eb;
+  background-color: rgba(37, 99, 235, 0.05);
+}
+.file-upload-input {
+  display: none;
+}
+.image{
+  border-radius: 20px;
+  width: 10%;
+  margin-right: 10px;
+}

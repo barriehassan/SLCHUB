@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Content Creator Tracking System</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#2563EB',secondary:'#1E40AF'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img class="image" src="sab.jpeg" alt="SAB">
+                        <span class="text-xl font-bold text-gray-800">SL Creator Hub</span>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="index.html" class="border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-link">Home</a>
+                        <a href="about.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-link">About</a>
+                        <a href="blogs.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-link">Blogs</a>
+                        <a href="creators.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-link">Creators</a>
+                        <a href="subscription.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-link">Subscription</a>
+                        <a href="contact.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-link">Contact</a>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                    <a href="login.html" class="text-gray-500 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium">Login</a>
+                    <a href="register.html" class="ml-4 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700">Register</a>
+                </div>
+                <div class="-mr-2 flex items-center sm:hidden">
+                    <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden sm:hidden" id="mobile-menu">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="index.html" class="bg-blue-50 border-blue-500 text-blue-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium nav-link">Home</a>
+                <a href="about.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium nav-link">About</a>
+                <a href="blogs.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium nav-link">Blogs</a>
+                <a href="creators.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium nav-link">Creators</a>
+                <a href="subscription.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium nav-link">Subscription</a>
+                <a href="contact.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium nav-link">Contact</a>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="login.html" class="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100">Login</a>
+                    <a href="register.html" class="block ml-3 px-4 py-2 bg-blue-600 text-white rounded-md text-base font-medium hover:bg-blue-700 w-fit">Register</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-black/30"></div>
+            <div class="container mx-auto px-4 py-24 relative z-10">
+                <div class="max-w-2xl">
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Protect & Verify Your Digital Content in Sierra Leone</h1>
+                    <p class="text-lg text-white/90 mb-8">Our platform helps content creators track, verify, and protect their digital assets while supporting monetization opportunities.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#" class="bg-primary hover:bg-secondary text-white px-6 py-3 !rounded-button whitespace-nowrap transition-colors font-medium">Get Started</a>
+                        <a href="#" class="bg-white hover:bg-gray-100 text-gray-800 px-6 py-3 !rounded-button whitespace-nowrap transition-colors font-medium">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">How Our System Works</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Our digital content tracking system provides a secure and transparent way for creators to protect their intellectual property.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="ri-shield-check-line text-primary ri-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Protect Your IPR</h3>
+                        <p class="text-gray-600">Register your content to establish clear ownership and protect your intellectual property rights in Sierra Leone's digital landscape.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="ri-verified-badge-line text-primary ri-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Verify Content</h3>
+                        <p class="text-gray-600">Our verification system authenticates your content across multiple platforms, providing proof of creation and ownership.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="ri-money-dollar-circle-line text-primary ri-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Support Monetization</h3>
+                        <p class="text-gray-600">Track your content performance and unlock monetization opportunities through verified creator status.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Choose Your Path</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Whether you're a content creator or an administrator, our platform offers tailored experiences to meet your needs.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100 cursor-pointer">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="ri-user-star-line text-primary ri-2x"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4 text-center">I am a Content Creator</h3>
+                        <p class="text-gray-600 text-center mb-6">Register your content, track performance metrics, and protect your intellectual property rights.</p>
+                        <div class="text-center">
+                            <a href="#" class="inline-block bg-primary hover:bg-secondary text-white px-6 py-3 !rounded-button whitespace-nowrap transition-colors font-medium">Get Started</a>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100 cursor-pointer">
+                        <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="ri-admin-line text-secondary ri-2x"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4 text-center">I am an Admin</h3>
+                        <p class="text-gray-600 text-center mb-6">Manage user verification, review content submissions, and maintain platform integrity.</p>
+                        <div class="text-center">
+                            <a href="#" class="inline-block bg-secondary hover:bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap transition-colors font-medium">Access Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+    </main>
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <a href="#" class="text-2xl font-['Pacifico'] text-white mb-4 inline-block">SL Creator Hub</a>
+                    <p class="text-gray-400 mb-6">Protecting and verifying digital content creators in Sierra Leone since 2023.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <div class="w-8 h-8 flex items-center justify-center">
+                                <i class="ri-facebook-fill"></i>
+                            </div>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <div class="w-8 h-8 flex items-center justify-center">
+                                <i class="ri-instagram-fill"></i>
+                            </div>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <div class="w-8 h-8 flex items-center justify-center">
+                                <i class="ri-twitter-fill"></i>
+                            </div>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <div class="w-8 h-8 flex items-center justify-center">
+                                <i class="ri-youtube-fill"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Legal Information</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Digital Rights Guide</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Monetization Strategies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Legal Protection</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Content Creation Tips</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">FAQs</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center mr-3 mt-0.5 text-gray-400">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <span class="text-gray-400">25 Siaka Stevens Street, Freetown, Sierra Leone</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center mr-3 mt-0.5 text-gray-400">
+                                <i class="ri-phone-line"></i>
+                            </div>
+                            <span class="text-gray-400">+232 76 123 4567</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center mr-3 mt-0.5 text-gray-400">
+                                <i class="ri-mail-line"></i>
+                            </div>
+                            <span class="text-gray-400">support@contentverify.sl</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 mb-4 md:mb-0">&copy; 2025 Digital Content Creator Tracking System. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+    
+    <script id="fileUploadScript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const fileUploadContainers = document.querySelectorAll('.file-upload-container');
+            
+            fileUploadContainers.forEach(container => {
+                const fileInput = container.querySelector('input[type="file"]');
+                const browseButton = container.querySelector('button');
+                
+                if (browseButton && fileInput) {
+                    browseButton.addEventListener('click', function() {
+                        fileInput.click();
+                    });
+                }
+                
+                if (container && fileInput) {
+                    container.addEventListener('click', function() {
+                        fileInput.click();
+                    });
+                    
+                    container.addEventListener('dragover', function(e) {
+                        e.preventDefault();
+                        container.classList.add('border-primary');
+                        container.classList.add('bg-primary/5');
+                    });
+                    
+                    container.addEventListener('dragleave', function(e) {
+                        e.preventDefault();
+                        container.classList.remove('border-primary');
+                        container.classList.remove('bg-primary/5');
+                    });
+                    
+                    container.addEventListener('drop', function(e) {
+                        e.preventDefault();
+                        container.classList.remove('border-primary');
+                        container.classList.remove('bg-primary/5');
+                        
+                        if (e.dataTransfer.files.length) {
+                            fileInput.files = e.dataTransfer.files;
+                            const fileName = e.dataTransfer.files[0].name;
+                            updateFileName(container, fileName);
+                        }
+                    });
+                    
+                    fileInput.addEventListener('change', function() {
+                        if (fileInput.files.length) {
+                            const fileName = fileInput.files[0].name;
+                            updateFileName(container, fileName);
+                        }
+                    });
+                }
+            });
+            
+            function updateFileName(container, fileName) {
+                const existingFileNameElement = container.querySelector('.file-name');
+                
+                if (existingFileNameElement) {
+                    existingFileNameElement.textContent = fileName;
+                } else {
+                    const fileNameElement = document.createElement('p');
+                    fileNameElement.className = 'text-primary font-medium mt-3 file-name';
+                    fileNameElement.textContent = fileName;
+                    container.appendChild(fileNameElement);
+                }
+            }
+        });
+    </script>
+    
+    <script id="passwordToggleScript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const passwordFields = document.querySelectorAll('input[type="password"]');
+            
+            passwordFields.forEach(field => {
+                const toggleButton = field.nextElementSibling;
+                
+                if (toggleButton && toggleButton.tagName === 'BUTTON') {
+                    const icon = toggleButton.querySelector('i');
+                    
+                    toggleButton.addEventListener('click', function() {
+                        if (field.type === 'password') {
+                            field.type = 'text';
+                            icon.className = 'ri-eye-line';
+                        } else {
+                            field.type = 'password';
+                            icon.className = 'ri-eye-off-line';
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+    
+    <script id="performanceChartScript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const performanceChartElement = document.getElementById('performanceChart');
+            
+            if (performanceChartElement) {
+                const performanceChart = echarts.init(performanceChartElement);
+                
+                const option = {
+                    animation: false,
+                    tooltip: {
+                        trigger: 'axis',
+                        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                        borderColor: '#e5e7eb',
+                        borderWidth: 1,
+                        textStyle: {
+                            color: '#1f2937'
+                        }
+                    },
+                    legend: {
+                        data: ['Views', 'Likes', 'Shares'],
+                        textStyle: {
+                            color: '#1f2937'
+                        }
+                    },
+                    grid: {
+                        left: '3%',
+                        right: '4%',
+                        bottom: '3%',
+                        containLabel: true
+                    },
+                    xAxis: {
+                        type: 'category',
+                        boundaryGap: false,
+                        data: ['May 12', 'May 15', 'May 18', 'May 21', 'May 24', 'May 27', 'May 30', 'Jun 2', 'Jun 5', 'Jun 8'],
+                        axisLine: {
+                            lineStyle: {
+                                color: '#d1d5db'
+                            }
+                        },
+                        axisLabel: {
+                            color: '#1f2937'
+                        }
+                    },
+                    yAxis: {
+                        type: 'value',
+                        axisLine: {
+                            lineStyle: {
+                                color: '#d1d5db'
+                            }
+                        },
+                        axisLabel: {
+                            color: '#1f2937'
+                        },
+                        splitLine: {
+                            lineStyle: {
+                                color: '#e5e7eb'
+                            }
+                        }
+                    },
+                    series: [
+                        {
+                            name: 'Views',
+                            type: 'line',
+                            smooth: true,
+                            symbol: 'none',
+                            lineStyle: {
+                                width: 3
+                            },
+                            areaStyle: {
+                                opacity: 0.1
+                            },
+                            data: [1200, 1320, 1500, 2500, 2800, 3200, 2900, 3500, 3800, 4200],
+                            color: 'rgba(87, 181, 231, 1)'
+                        },
+                        {
+                            name: 'Likes',
+                            type: 'line',
+                            smooth: true,
+                            symbol: 'none',
+                            lineStyle: {
+                                width: 3
+                            },
+                            areaStyle: {
+                                opacity: 0.1
+                            },
+                            data: [150, 180, 210, 350, 400, 450, 420, 480, 520, 580],
+                            color: 'rgba(141, 211, 199, 1)'
+                        },
+                        {
+                            name: 'Shares', 
+                            type: 'line',
+                            smooth: true,
+                            symbol: 'none',
+                            lineStyle: {
+                                width: 3
+                            },
+                            areaStyle: {
+                                opacity: 0.1
+                            },
+                            data: [50, 60, 70, 120, 140, 180, 160, 190, 210, 240],
+                            color: 'rgba(251, 191, 114, 1)'
+                        }
+                    ]
+                };
+                
+                performanceChart.setOption(option);
+                
+                window.addEventListener('resize', function() {
+                    performanceChart.resize();
+                });
+            }
+        });
+    </script>
+    
+    <script id="verificationChartScript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const verificationChartElement = document.getElementById('verificationChart');
+            
+            if (verificationChartElement) {
+                const verificationChart = echarts.init(verificationChartElement);
+                
+                const option = {
+                    animation: false,
+                    tooltip: {
+                        trigger: 'item',
+                        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                        borderColor: '#e5e7eb',
+                        borderWidth: 1,
+                        textStyle: {
+                            color: '#1f2937'
+                        }
+                    },
+                    legend: {
+                        orient: 'horizontal',
+                        bottom: 'bottom',
+                        textStyle: {
+                            color: '#1f2937'
+                        }
+                    },
+                    series: [
+                        {
+                            name: 'Verification Status',
+                            type: 'pie',
+                            radius: ['40%', '70%'],
+                            avoidLabelOverlap: false,
+                            itemStyle: {
+                                borderRadius: 10,
+                                borderColor: '#fff',
+                                borderWidth: 2
+                            },
+                            label: {
+                                show: false,
+                                position: 'center'
+                            },
+                            emphasis: {
+                                label: {
+                                    show: true,
+                                    fontSize: '18',
+                                    fontWeight: 'bold'
+                                }
+                            },
+                            labelLine: {
+                                show: false
+                            },
+                            data: [
+                                { value: 186, name: 'Verified', itemStyle: { color: 'rgba(87, 181, 231, 1)' } },
+                                { value: 14, name: 'Pending', itemStyle: { color: 'rgba(251, 191, 114, 1)' } },
+                                { value: 48, name: 'Rejected', itemStyle: { color: 'rgba(252, 141, 98, 1)' } }
+                            ]
+                        }
+                    ]
+                };
+                
+                verificationChart.setOption(option);
+                
+                window.addEventListener('resize', function() {
+                    verificationChart.resize();
+                });
+            }
+        });
+    </script>
+    
+    <script id="mobileMenuScript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.querySelector('.ri-menu-line').parentElement;
+            const nav = document.querySelector('nav');
+            
+            if (menuButton && nav) {
+                menuButton.addEventListener('click', function() {
+                    if (nav.classList.contains('hidden')) {
+                        nav.classList.remove('hidden');
+                        nav.classList.add('flex', 'flex-col', 'absolute', 'top-16', 'left-0', 'right-0', 'bg-white', 'shadow-md', 'p-4', 'z-50');
+                        menuButton.querySelector('i').className = 'ri-close-line text-gray-800 ri-lg';
+                    } else {
+                        nav.classList.add('hidden');
+                        nav.classList.remove('flex', 'flex-col', 'absolute', 'top-16', 'left-0', 'right-0', 'bg-white', 'shadow-md', 'p-4', 'z-50');
+                        menuButton.querySelector('i').className = 'ri-menu-line text-gray-800 ri-lg';
+                    }
+                });
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

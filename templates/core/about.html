@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Content Creator Tracking System - About</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#2563EB',secondary:'#1E40AF'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img class="image" src="sab.jpeg" alt="SAB">
+                        <span class="text-xl font-bold text-gray-800">SL Creator Hub</span>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="index.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-link">Home</a>
+                        <a href="about.html" class="border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-link">About</a>
+                        <a href="blogs.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-link">Blogs</a>
+                        <a href="creators.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-link">Creators</a>
+                        <a href="subscription.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-link">Subscription</a>
+                        <a href="contact.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-link">Contact</a>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                    <a href="login.html" class="text-gray-500 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium">Login</a>
+                    <a href="register.html" class="ml-4 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700">Register</a>
+                </div>
+                <div class="-mr-2 flex items-center sm:hidden">
+                    <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden sm:hidden" id="mobile-menu">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="index.html" class="bg-blue-50 border-blue-500 text-blue-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium nav-link">Home</a>
+                <a href="about.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium nav-link">About</a>
+                <a href="blogs.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium nav-link">Blogs</a>
+                <a href="creators.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium nav-link">Creators</a>
+                <a href="subscription.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium nav-link">Subscription</a>
+                <a href="contact.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium nav-link">Contact</a>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="login.html" class="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100">Login</a>
+                    <a href="register.html" class="block ml-3 px-4 py-2 bg-blue-600 text-white rounded-md text-base font-medium hover:bg-blue-700 w-fit">Register</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">About Our Platform</h2>
+                        <p class="text-gray-600">Learn how our system helps protect and verify digital content creators in Sierra Leone.</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-sm mb-8">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Our Mission</h3>
+                        <p class="text-gray-700 mb-6">The Digital Content Creator and Blogger Tracking System was established to address the growing need for intellectual property protection in Sierra Leone's digital landscape. Our mission is to provide a secure, transparent platform that verifies content ownership, protects creators' rights, and supports monetization opportunities.</p>
+                        
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Why Content Verification Matters</h3>
+                        <p class="text-gray-700 mb-6">In today's digital economy, content creators face significant challenges in protecting their work from unauthorized use and ensuring proper attribution. Our verification system provides legal recognition and protection under Sierra Leone's intellectual property laws, helping creators establish clear ownership of their digital assets.</p>
+                        
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div class="bg-white p-5 rounded border border-gray-200">
+                                <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mb-3">
+                                    <i class="ri-shield-check-line text-primary"></i>
+                                </div>
+                                <h4 class="text-lg font-medium text-gray-900 mb-2">Legal Protection</h4>
+                                <p class="text-gray-600">Our system provides legally recognized verification that can be used to protect your content from unauthorized use.</p>
+                            </div>
+                            
+                            <div class="bg-white p-5 rounded border border-gray-200">
+                                <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mb-3">
+                                    <i class="ri-global-line text-primary"></i>
+                                </div>
+                                <h4 class="text-lg font-medium text-gray-900 mb-2">Cross-Platform Support</h4>
+                                <p class="text-gray-600">Whether you create content on YouTube, Facebook, Instagram, or your own blog, our system works across all major platforms.</p>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">How We Support Digital Rights</h3>
+                        <p class="text-gray-700 mb-6">Our platform works closely with legal authorities and digital platforms to ensure that verified content is protected. We provide:</p>
+                        
+                        <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+                            <li>Official verification certificates that establish content ownership</li>
+                            <li>Monitoring tools to detect unauthorized use of your content</li>
+                            <li>Legal resources and support for addressing copyright infringement</li>
+                            <li>Educational materials about digital rights and intellectual property</li>
+                            <li>Community support from other content creators in Sierra Leone</li>
+                        </ul>
+                        
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Our Team</h3>
+                        <p class="text-gray-700">Our diverse team includes legal experts, technology specialists, and experienced content creators who understand the challenges faced by digital creators in Sierra Leone. We're committed to building a thriving digital ecosystem where creators are properly recognized and rewarded for their work.</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <a href="#" class="inline-block bg-primary hover:bg-secondary text-white px-6 py-3 !rounded-button whitespace-nowrap transition-colors font-medium">Join Our Community</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Legal Information</h2>
+                        <p class="text-gray-600">Important legal information about our platform and your rights as a content creator.</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-sm mb-8">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Terms of Service</h3>
+                        <div class="text-gray-700 space-y-4">
+                            <p>Welcome to the Digital Content Creator and Blogger Tracking System. By using our platform, you agree to comply with and be bound by the following terms and conditions:</p>
+                            
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-2">1. Account Registration</h4>
+                                <p>To use our services, you must register for an account. You agree to provide accurate, current, and complete information during the registration process and to update such information to keep it accurate, current, and complete.</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-2">2. Content Verification</h4>
+                                <p>Our platform verifies content ownership based on the information and evidence you provide. You are solely responsible for ensuring that all content submitted for verification is your original work or that you have the legal right to use and register it.</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-2">3. Intellectual Property Rights</h4>
+                                <p>Our verification system does not grant you any additional intellectual property rights beyond those you already possess under applicable laws. The verification serves as evidence of your claim to ownership or rights to use the content.</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-2">4. Prohibited Activities</h4>
+                                <p>You agree not to use our platform to verify content that infringes on the intellectual property rights of others, contains illegal material, or violates any applicable laws or regulations in Sierra Leone or internationally.</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-2">5. Termination</h4>
+                                <p>We reserve the right to terminate or suspend your account and access to our services at our sole discretion, without notice, for conduct that we believe violates these Terms of Service or is harmful to other users, us, or third parties, or for any other reason.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-sm mb-8">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Privacy Policy</h3>
+                        <div class="text-gray-700 space-y-4">
+                            <p>Your privacy is important to us. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our platform:</p>
+                            
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-2">1. Information We Collect</h4>
+                                <p>We collect personal information that you voluntarily provide to us during registration and when using our services, including but not limited to your name, email address, phone number, and content samples for verification.</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-2">2. How We Use Your Information</h4>
+                                <p>We use the information we collect to provide, maintain, and improve our services, to process and verify your content, to communicate with you, and to comply with legal obligations.</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-2">3. Information Sharing</h4>
+                                <p>We may share your information with third parties only in the ways described in this Privacy Policy, including with service providers who assist us in operating our platform and with legal authorities when required by law.</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-2">4. Data Security</h4>
+                                <p>We implement appropriate technical and organizational measures to protect your personal information from unauthorized access, disclosure, alteration, and destruction.</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-2">5. Your Rights</h4>
+                                <p>You have the right to access, correct, or delete your personal information. You may also have the right to restrict or object to certain processing of your data. To exercise these rights, please contact us using the information provided in the Contact section.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Intellectual Property Protection</h3>
+                        <div class="text-gray-700 space-y-4">
+                            <p>Our platform is designed to help protect your intellectual property rights in Sierra Leone. Here's what you should know:</p>
+                            
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-2">1. Legal Framework</h4>
+                                <p>Our verification system operates within the framework of Sierra Leone's copyright and intellectual property laws, including the Copyright Act and related regulations.</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-2">2. Verification Certificate</h4>
+                                <p>Upon successful verification, you will receive a digital certificate that can serve as evidence of your content ownership. This certificate includes a timestamp, unique identification number, and description of the verified content.</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-2">3. Dispute Resolution</h4>
+                                <p>In case of disputes regarding content ownership, our verification records can be used as supporting evidence. However, final determination of intellectual property rights remains with the appropriate legal authorities.</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-2">4. International Protection</h4>
+                                <p>While our verification is primarily designed for protection within Sierra Leone, it may also be useful as supporting evidence in international copyright disputes, depending on applicable laws and treaties.</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-2">5. Legal Assistance</h4>
+                                <p>We can provide referrals to legal professionals specializing in intellectual property law who can assist you with specific cases of copyright infringement or other violations of your digital rights.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="script.js"></script>
+</body>
+</html>

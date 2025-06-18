@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Content Creator Tracking System</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#2563EB',secondary:'#1E40AF'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img class="image" src="sab.jpeg" alt="SAB">
+                        <span class="text-xl font-bold text-gray-800">SL Creator Hub</span>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="index.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-link">Home</a>
+                        <a href="about.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-link">About</a>
+                        <a href="blogs.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-link">Blogs</a>
+                        <a href="creators.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-link">Creators</a>
+                        <a href="subscription.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-link">Subscription</a>
+                        <a href="contact.html" class="border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-link">Contact</a>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                    <a href="login.html" class="text-gray-500 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium">Login</a>
+                    <a href="register.html" class="ml-4 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700">Register</a>
+                </div>
+                <div class="-mr-2 flex items-center sm:hidden">
+                    <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden sm:hidden" id="mobile-menu">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="index.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium nav-link">Home</a>
+                <a href="about.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium nav-link">About</a>
+                <a href="blogs.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium nav-link">Blogs</a>
+                <a href="creators.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium nav-link">Creators</a>
+                <a href="subscription.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium nav-link">Subscription</a>
+                <a href="contact.html" class="bg-blue-50 border-blue-500 text-blue-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium nav-link">Contact</a>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="login.html" class="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100">Login</a>
+                    <a href="register.html" class="block ml-3 px-4 py-2 bg-blue-600 text-white rounded-md text-base font-medium hover:bg-blue-700 w-fit">Register</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Contact Us</h2>
+                        <p class="text-gray-600">Have questions about our platform? We're here to help you.</p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Send Us a Message</h3>
+                            
+                            <form>
+                                <div class="mb-4">
+                                    <label for="contactName" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                    <input type="text" id="contactName" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors" placeholder="Enter your name">
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label for="contactEmail" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                    <input type="email" id="contactEmail" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors" placeholder="Enter your email">
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label for="contactSubject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                                    <input type="text" id="contactSubject" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors" placeholder="Enter subject">
+                                </div>
+                                
+                                <div class="mb-6">
+                                    <label for="contactMessage" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                                    <textarea id="contactMessage" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors" placeholder="Your message here..."></textarea>
+                                </div>
+                                
+                                <button type="submit" class="w-full bg-primary hover:bg-secondary text-white py-2 !rounded-button whitespace-nowrap transition-colors font-medium">Send Message</button>
+                            </form>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Contact Information</h3>
+                            
+                            <div class="space-y-4 mb-6">
+                                <div class="flex items-start">
+                                    <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                                        <i class="ri-map-pin-line text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium text-gray-900 mb-1">Office Address</p>
+                                        <p class="text-gray-600">25 Siaka Stevens Street, Freetown, Sierra Leone</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                                        <i class="ri-phone-line text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium text-gray-900 mb-1">Phone Number</p>
+                                        <p class="text-gray-600">+232 76 123 4567</p>
+                                        <p class="text-gray-600">+232 88 987 6543</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                                        <i class="ri-mail-line text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium text-gray-900 mb-1">Email Address</p>
+                                        <p class="text-gray-600">support@contentverify.sl</p>
+                                        <p class="text-gray-600">info@contentverify.sl</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                                        <i class="ri-time-line text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium text-gray-900 mb-1">Office Hours</p>
+                                        <p class="text-gray-600">Monday - Friday: 9:00 AM - 5:00 PM</p>
+                                        <p class="text-gray-600">Saturday: 9:00 AM - 1:00 PM</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="h-48 bg-gray-100 rounded-lg overflow-hidden">
+                                <img src="https://public.readdy.ai/gen_page/map_placeholder_1280x720.png" alt="Office Location Map" class="w-full h-full object-cover object-top">
+                            </div>
+                            
+                            <div class="mt-6">
+                                <h4 class="font-medium text-gray-900 mb-3">Connect With Us</h4>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-200 transition-colors">
+                                        <i class="ri-facebook-fill"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center text-pink-600 hover:bg-pink-200 transition-colors">
+                                        <i class="ri-instagram-fill"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 bg-cyan-100 rounded-full flex items-center justify-center text-cyan-600 hover:bg-cyan-200 transition-colors">
+                                        <i class="ri-twitter-fill"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center text-red-600 hover:bg-red-200 transition-colors">
+                                        <i class="ri-youtube-fill"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+</body>

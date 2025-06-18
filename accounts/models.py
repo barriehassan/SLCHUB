@@ -81,7 +81,6 @@ class CreatorProfile(BaseProfile):
         return f"Tourist: {self.user.username}"
 
 
-
 class AdminProfile(BaseProfile):
     role = models.CharField(max_length=255, blank=True, null=True)
 

@@ -75,6 +75,8 @@ class BaseProfile(models.Model):
         abstract = True
 
 class CreatorProfile(BaseProfile):
+    media = models.URLField(blank=True, null=True)
+    bio = models.TextField(blank=True, null=True)
     pass
 
     def __str__(self):

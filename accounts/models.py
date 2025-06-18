@@ -69,6 +69,7 @@ class BaseProfile(models.Model):
     address = models.TextField(blank=True, null=True)
     DOB = models.DateField(blank=True, null=True)
     media = models.URLField(blank=True, null=True)
+    bio = models.TextField(blank=True, null=True)
 
     class Meta:
         abstract = True

@@ -1,3 +1,4 @@
+<<<<<<<< HEAD:templates/base.html
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -69,8 +70,29 @@
     {% block body %}
 
     {% endblock %}
+========
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+	   <main>
+        <section class="hero-section relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-black/30"></div>
+            <div class="container mx-auto px-4 py-24 relative z-10">
+                <div class="max-w-2xl">
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Protect & Verify Your Digital Content in Sierra Leone</h1>
+                    <p class="text-lg text-white/90 mb-8">Our platform helps content creators track, verify, and protect their digital assets while supporting monetization opportunities.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#" class="bg-primary hover:bg-secondary text-white px-6 py-3 !rounded-button whitespace-nowrap transition-colors font-medium">Get Started</a>
+                        <a href="#" class="bg-white hover:bg-gray-100 text-gray-800 px-6 py-3 !rounded-button whitespace-nowrap transition-colors font-medium">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+>>>>>>>> origin/master:templates/index.html
 
 
+<<<<<<<< HEAD:templates/base.html
     <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-4 gap-8 mb-8">
@@ -462,3 +484,50 @@
     {% endblock %}
 </body>
 </html>
+========
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Choose Your Path</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Whether you're a content creator or an administrator, our platform offers tailored experiences to meet your needs.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100 cursor-pointer">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="ri-user-star-line text-primary ri-2x"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4 text-center">I am a Content Creator</h3>
+                        <p class="text-gray-600 text-center mb-6">Register your content, track performance metrics, and protect your intellectual property rights.</p>
+                        <div class="text-center">
+                            <a href="#" class="inline-block bg-primary hover:bg-secondary text-white px-6 py-3 !rounded-button whitespace-nowrap transition-colors font-medium">Get Started</a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100 cursor-pointer">
+                        <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="ri-admin-line text-secondary ri-2x"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4 text-center">I am an Admin</h3>
+                        <p class="text-gray-600 text-center mb-6">Manage user verification, review content submissions, and maintain platform integrity.</p>
+                        <div class="text-center">
+                            <a href="#" class="inline-block bg-secondary hover:bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap transition-colors font-medium">Access Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+>>>>>>>> origin/master:templates/index.html
